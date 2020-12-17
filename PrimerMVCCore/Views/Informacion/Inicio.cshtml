@@ -1,0 +1,30 @@
+﻿@*COMENTARIOS EN RAZOR*@
+@{
+    @*DECIARACION DE VARIABLES EN RAZOR*@
+    int numero = 14;
+    string texto = "TEXTO";
+
+}
+@model Persona
+<!--Dibujar variables:-->
+<h1 style="color:Highlight">@texto</h1>
+<!--CODIGO LOGICO-->
+@if (numero > 0)
+{
+    //ESTO ES CODIGO DE SERVIDOR.
+    //CUANDO ESCRIBIMOS CARACTERES HTML, SE CORTA EL CODIGO LOGICO Y SE EMPIEZA EL DIBUJO
+    <h2>Positivo @numero</h2>
+}
+else
+{
+    <h2>Negativo @numero</h2>
+}
+
+<h1 style="color:fuchsia">
+    Mi primera vista MVC
+</h1>
+<h1>Nombre: @ViewBag.Nombre
+    Edad:@ViewBag.Edad</h1>
+<hr />
+<h1>PERSONA</h1>
+<h2>@Model.Nombre,@Model.Genero, @Model.Edad </h2>
